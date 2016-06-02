@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
+            <connections>
+                <outlet property="bgView" destination="h6P-Bk-lhk" id="zTU-b0-vps"/>
+                <outlet property="password" destination="w0l-em-u39" id="2pC-HF-4FC"/>
+                <outlet property="userName" destination="drL-IE-yb0" id="sk2-eP-enh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6P-Bk-lhk">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dwy-lQ-ctS">
+                            <rect key="frame" x="87" y="70" width="240" height="128"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入账号名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="drL-IE-yb0">
+                            <rect key="frame" x="37" y="223" width="341" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w0l-em-u39">
+                            <rect key="frame" x="37" y="275" width="341" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUx-Vg-Gb6">
+                            <rect key="frame" x="108" y="321" width="198" height="30"/>
+                            <state key="normal" title="登录"/>
+                            <connections>
+                                <action selector="login:" destination="-1" eventType="touchUpInside" id="285-rj-tco"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Itk-5J-cYG">
+                            <rect key="frame" x="296" y="275" width="82" height="30"/>
+                            <state key="normal" title="忘记密码"/>
+                            <connections>
+                                <action selector="forget:" destination="-1" eventType="touchUpInside" id="Lqe-lw-SBL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUc-rr-pIe">
+                            <rect key="frame" x="31" y="698" width="151" height="30"/>
+                            <state key="normal" title="账号注册"/>
+                            <connections>
+                                <action selector="register:" destination="-1" eventType="touchUpInside" id="mng-1T-Y1z"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgW-Sq-avc">
+                            <rect key="frame" x="215" y="698" width="146" height="30"/>
+                            <state key="normal" title="第三方登录"/>
+                            <connections>
+                                <action selector="thredLogin:" destination="-1" eventType="touchUpInside" id="J9D-gO-KbD"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LW-vb-hmG">
+                            <rect key="frame" x="190" y="697" width="12" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="h6P-Bk-lhk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Sw5-Wi-VK2"/>
+                <constraint firstAttribute="trailing" secondItem="h6P-Bk-lhk" secondAttribute="trailing" id="Y0D-Um-Auu"/>
+                <constraint firstItem="h6P-Bk-lhk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cZv-MM-lFU"/>
+                <constraint firstAttribute="bottom" secondItem="h6P-Bk-lhk" secondAttribute="bottom" id="pUg-m5-EgN"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="299" y="424"/>
+        </view>
+    </objects>
+</document>

@@ -12,7 +12,8 @@
 #import "LeftMeViewController.h"
 #import "BaseViewController.h"
 #import "BaseNavigationViewController.h"
-
+#import "LoginViewController.h"
+#import <MaxLeap/MaxLeap.h>
 @interface AppDelegate ()
 
 @end
@@ -54,7 +55,48 @@
     mmDrawerC.closeDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     
     //将侧滑控制器作为窗口的根视图控制器
-    self.window.rootViewController = mmDrawerC;
+   // self.window.rootViewController = mmDrawerC;
+    
+    //如果不是第一次登陆
+    if ([[NSUserDefaults standardUserDefaults]boolForKey:kIsUsed]==YES) {
+        
+        self.window.rootViewController = mmDrawerC;
+        
+        return YES;
+        
+    }
+    
+    //第一次加载的时候
+    LoginViewController *loginVC = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+    
+    __weak AppDelegate *weakSelf = self;
+    
+    [loginVC setStartBlock:^{
+        
+        __strong AppDelegate *strongSelf = weakSelf;
+        
+        strongSelf.window.rootViewController = mmDrawerC;
+        
+        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:kIsUsed];
+        
+    }];
+    
+    self.window.rootViewController = loginVC;
+    
+    
+    [MaxLeap setApplicationId:@"574ea2caa5ff7f0001c6d67e" clientKey:@"MDJMVHBIbDZQV1RfTFV5czhYWHVSQQ" site:MLSiteCN];
+    
+    MLObject *obj = [MLObject objectWithoutDataWithClassName:@"Test" objectId:@"561c83c0226"];
+    [obj fetchIfNeededInBackgroundWithBlock:^(MLObject * _Nullable object, NSError * _Nullable error) {
+        if (error.code == kMLErrorInvalidObjectId) {
+            NSLog(@"已经能够正确连接上您的云端应用");
+        } else {
+            NSLog(@"应用访问凭证不正确，请检查。");
+        }
+    }];
+    
+    
+    
 
     return YES;
 }

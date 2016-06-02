@@ -45,6 +45,14 @@
 		04992E461D00521600781190 /* PostBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04992E441D00521600781190 /* PostBoxViewController.m */; };
 		04992E471D00521600781190 /* PostBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04992E451D00521600781190 /* PostBoxViewController.xib */; };
 		04992E4B1D0064D800781190 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04992E4A1D0064D800781190 /* icon.png */; };
+		04D86F711D00821C00A5B7E1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D86F6F1D00821C00A5B7E1 /* LoginViewController.m */; };
+		04D86F721D00821C00A5B7E1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D86F701D00821C00A5B7E1 /* LoginViewController.xib */; };
+		04D86F741D00881E00A5B7E1 /* MaxLeap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D86F731D00881E00A5B7E1 /* MaxLeap.framework */; };
+		04D86F761D0088E300A5B7E1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D86F751D0088E300A5B7E1 /* MobileCoreServices.framework */; };
+		04D86F781D0088F700A5B7E1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D86F771D0088F700A5B7E1 /* CoreTelephony.framework */; };
+		04D86F7A1D00890700A5B7E1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D86F791D00890700A5B7E1 /* SystemConfiguration.framework */; };
+		04D86F7C1D00891A00A5B7E1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D86F7B1D00891A00A5B7E1 /* libsqlite3.tbd */; };
+		04D86F7E1D00892F00A5B7E1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D86F7D1D00892F00A5B7E1 /* libz.tbd */; };
 		1818F4E71D001CB4001E24F4 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818F4E61D001CB4001E24F4 /* PostViewController.m */; };
 		1818F4EB1D001D58001E24F4 /* RRMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818F4EA1D001D58001E24F4 /* RRMessageModel.m */; };
 		1818F4F11D001D91001E24F4 /* RRCustomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818F4EE1D001D91001E24F4 /* RRCustomScrollView.m */; };
@@ -114,6 +122,15 @@
 		04992E441D00521600781190 /* PostBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostBoxViewController.m; sourceTree = "<group>"; };
 		04992E451D00521600781190 /* PostBoxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostBoxViewController.xib; sourceTree = "<group>"; };
 		04992E4A1D0064D800781190 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		04D86F6E1D00821C00A5B7E1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		04D86F6F1D00821C00A5B7E1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		04D86F701D00821C00A5B7E1 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		04D86F731D00881E00A5B7E1 /* MaxLeap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MaxLeap.framework; sourceTree = "<group>"; };
+		04D86F751D0088E300A5B7E1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		04D86F771D0088F700A5B7E1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		04D86F791D00890700A5B7E1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		04D86F7B1D00891A00A5B7E1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		04D86F7D1D00892F00A5B7E1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		1818F4E51D001CB4001E24F4 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
 		1818F4E61D001CB4001E24F4 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
 		1818F4E91D001D58001E24F4 /* RRMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRMessageModel.h; sourceTree = "<group>"; };
@@ -135,7 +152,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D86F7E1D00892F00A5B7E1 /* libz.tbd in Frameworks */,
+				04D86F7C1D00891A00A5B7E1 /* libsqlite3.tbd in Frameworks */,
+				04D86F7A1D00890700A5B7E1 /* SystemConfiguration.framework in Frameworks */,
+				04D86F781D0088F700A5B7E1 /* CoreTelephony.framework in Frameworks */,
+				04D86F761D0088E300A5B7E1 /* MobileCoreServices.framework in Frameworks */,
 				1818F4F41D001DB3001E24F4 /* AssetsLibrary.framework in Frameworks */,
+				04D86F741D00881E00A5B7E1 /* MaxLeap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +168,11 @@
 		04846A2A1D000565007E3CE3 = {
 			isa = PBXGroup;
 			children = (
+				04D86F7D1D00892F00A5B7E1 /* libz.tbd */,
+				04D86F7B1D00891A00A5B7E1 /* libsqlite3.tbd */,
+				04D86F791D00890700A5B7E1 /* SystemConfiguration.framework */,
+				04D86F771D0088F700A5B7E1 /* CoreTelephony.framework */,
+				04D86F751D0088E300A5B7E1 /* MobileCoreServices.framework */,
 				1818F4F31D001DB3001E24F4 /* AssetsLibrary.framework */,
 				04846A351D000566007E3CE3 /* PickPicAPP */,
 				04846A341D000566007E3CE3 /* Products */,
@@ -162,6 +190,7 @@
 		04846A351D000566007E3CE3 /* PickPicAPP */ = {
 			isa = PBXGroup;
 			children = (
+				04D86F6D1D00821C00A5B7E1 /* Login */,
 				04846A4F1D0005B7007E3CE3 /* images */,
 				04846A4D1D0005B7007E3CE3 /* Base */,
 				04846A4E1D0005B7007E3CE3 /* Framework */,
@@ -199,6 +228,7 @@
 		04846A4E1D0005B7007E3CE3 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				04D86F731D00881E00A5B7E1 /* MaxLeap.framework */,
 				04846A6D1D000696007E3CE3 /* CustomTabBarController */,
 				04846A701D000696007E3CE3 /* MMDrawerController */,
 			);
@@ -421,6 +451,16 @@
 			path = subControllers;
 			sourceTree = "<group>";
 		};
+		04D86F6D1D00821C00A5B7E1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				04D86F6E1D00821C00A5B7E1 /* LoginViewController.h */,
+				04D86F6F1D00821C00A5B7E1 /* LoginViewController.m */,
+				04D86F701D00821C00A5B7E1 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		1818F4E81D001D3D001E24F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -533,6 +573,7 @@
 				04846AA01D0006C9007E3CE3 /* LeftMeViewController.xib in Resources */,
 				04846A641D0005F8007E3CE3 /* tabBar_bg.jpg in Resources */,
 				04846A611D0005F8007E3CE3 /* Link_Building_764px_1141913_easyicon.net.png in Resources */,
+				04D86F721D00821C00A5B7E1 /* LoginViewController.xib in Resources */,
 				04846A5D1D0005F8007E3CE3 /* Conversion_802px_1141917_easyicon.net.png in Resources */,
 				04846A5B1D0005F8007E3CE3 /* addressBook2.png in Resources */,
 				04846A411D000566007E3CE3 /* Main.storyboard in Resources */,
@@ -558,6 +599,7 @@
 				1818F4F21D001D91001E24F4 /* UICollectionViewCellPhoto.m in Sources */,
 				04846A7D1D000696007E3CE3 /* MMDrawerController.m in Sources */,
 				04846A7E1D000696007E3CE3 /* MMDrawerVisualState.m in Sources */,
+				04D86F711D00821C00A5B7E1 /* LoginViewController.m in Sources */,
 				1818F4E71D001CB4001E24F4 /* PostViewController.m in Sources */,
 				1818F4F11D001D91001E24F4 /* RRCustomScrollView.m in Sources */,
 				C6C8D6751D000F2D00948262 /* picDetails.m in Sources */,
@@ -684,6 +726,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PickPicAPP/Framework",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PickPicAPP/PrefixHeader.pch";
 				INFOPLIST_FILE = PickPicAPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
@@ -697,6 +743,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PickPicAPP/Framework",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PickPicAPP/PrefixHeader.pch";
 				INFOPLIST_FILE = PickPicAPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
