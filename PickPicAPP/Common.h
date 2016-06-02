@@ -1,15 +1,14 @@
 //
-//  ViewController.h
+//  Common.h
 //  PickPicAPP
 //
 //  Created by mac on 16/6/2.
 //  Copyright © 2016年 mac. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#ifndef Common_h
+#define Common_h
 
-@interface ViewController : UIViewController
+#import "BaseViewController.h"
 
-
-@end
-
+#endif /* Common_h */

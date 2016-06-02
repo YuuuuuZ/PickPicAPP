@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  PickPicAPP
+//
+//  Created by mac on 16/6/2.
+//  Copyright © 2016年 mac. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "Common.h"
+#define kScreenW self.view.bounds.size.width
+#define kScreenH self.view.bounds.size.height
+#endif /* PrefixHeader_pch */

@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "MMDrawerController.h"
+#import "CustomTabBarController.h"
+#import "LeftMeViewController.h"
+#import "BaseViewController.h"
+#import "BaseNavigationViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +21,41 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    //    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    /*--------------------------------------------------------------------*/
+    //左侧控制器
+    LeftMeViewController *leftMe = [[LeftMeViewController alloc] init];
+    
+    //中间的标签控制器
+    CustomTabBarController *tabBarC = [[CustomTabBarController alloc] initWithSelectedImage:nil tabBarBackgroundImage:[UIImage imageNamed:@"tabBar_bg.jpg"]];
+    
+    //控制器名字数组
+    NSArray *controllers_array = @[@"Home",@"Message",@"Post"];
+    //标签控制器的子控制器数组
+    NSMutableArray *tabBar_controllers = [NSMutableArray array];
+    
+    for (int i=0; i<controllers_array.count; i++) {
+        
+        BaseViewController *vc = [[NSClassFromString([NSString stringWithFormat:@"%@ViewController",controllers_array[i]]) alloc] init];
+        vc.view.backgroundColor = [UIColor colorWithRed:171 green:192 blue:154 alpha:1];
+        BaseNavigationViewController *nvc = [[BaseNavigationViewController alloc] initWithRootViewController:vc];
+        
+        [tabBar_controllers addObject:nvc];
+    }
+    tabBarC.viewControllers = tabBar_controllers;
+    
+    //侧滑控制器
+    MMDrawerController *mmDrawerC = [[MMDrawerController alloc] initWithCenterViewController:tabBarC leftDrawerViewController:leftMe];
+    mmDrawerC.maximumLeftDrawerWidth = self.window.frame.size.width/5*4;
+    mmDrawerC.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+    mmDrawerC.closeDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+    
+    //将侧滑控制器作为窗口的根视图控制器
+    self.window.rootViewController = mmDrawerC;
+
     return YES;
 }
 
