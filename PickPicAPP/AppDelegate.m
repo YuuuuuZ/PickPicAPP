@@ -12,7 +12,7 @@
 #import "LeftMeViewController.h"
 #import "BaseViewController.h"
 #import "BaseNavigationViewController.h"
-#import "LoginViewController.h"
+
 @interface AppDelegate ()
 
 @end

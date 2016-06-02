@@ -65,27 +65,6 @@
     [signOut setTitle:@"注销" forState:UIControlStateNormal];
     signOut.backgroundColor = [UIColor redColor];
     [self.view addSubview:signOut];
-    
-    
-    headerView.userInteractionEnabled = YES;
-    UIGestureRecognizer *gestureRecognizer = [[UIGestureRecognizer alloc] initWithTarget:self action:@selector(changeHeadImage)];
-    [headerView addGestureRecognizer:gestureRecognizer];
-    
-}
--(void)changeHeadImage{
-    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    [actionSheet addAction:[UIAlertAction actionWithTitle:@"更换头像" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
-    }]];
-    [actionSheet addAction:[UIAlertAction actionWithTitle:@"保存" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
-    }]];
-    [actionSheet addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        
-    }]];
-    [self presentViewController:actionSheet animated:YES completion:^{
-        
-    }];
 }
 #pragma mark ----- UITableViewDataSource -----
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -104,8 +83,5 @@
     cell.imageView.image = _image_list[indexPath.row];
     cell.textLabel.text = _text_list[indexPath.row];
     return cell;
-}
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
 }
 @end
