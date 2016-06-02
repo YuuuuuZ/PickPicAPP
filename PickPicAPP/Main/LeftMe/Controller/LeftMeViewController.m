@@ -7,8 +7,12 @@
 //
 
 #import "LeftMeViewController.h"
+#import "FollowMeViewController.h"
+#import "MyFollowsViewController.h"
+#import "CollectionBoxViewController.h"
+#import "PostBoxViewController.h"
 
-@interface LeftMeViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface LeftMeViewController ()<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSArray *text_list;
 @property(nonatomic,strong)NSArray *image_list;
@@ -61,10 +65,36 @@
     [self.view addSubview:_tableView];
     
     //注销按钮
-    UIButton *signOut = [[UIButton alloc] initWithFrame:CGRectMake(kScreenW/2-100, kScreenH-50, 80, 40)];
+    UIButton *signOut = [[UIButton alloc] initWithFrame:CGRectMake((kScreenW/5*4)/2.0-20, kScreenH-50, 80, 40)];
     [signOut setTitle:@"注销" forState:UIControlStateNormal];
     signOut.backgroundColor = [UIColor redColor];
     [self.view addSubview:signOut];
+    
+    headerView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headImageClick)];
+    [headerView addGestureRecognizer:gesture];
+}
+-(void)headImageClick{
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    [actionSheet addAction:[UIAlertAction actionWithTitle:@"更换头像" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //用UIImagePickerController打开相册
+        UIImagePickerController *imagePickerC = [[UIImagePickerController alloc] init];
+        imagePickerC.delegate = self;
+        imagePickerC.allowsEditing = YES;
+        imagePickerC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:imagePickerC animated:YES completion:^{
+            
+        }];
+    }]];
+    [actionSheet addAction:[UIAlertAction actionWithTitle:@"保存" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    [actionSheet addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    [self presentViewController:actionSheet animated:YES completion:^{
+        
+    }];
 }
 #pragma mark ----- UITableViewDataSource -----
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -83,5 +113,38 @@
     cell.imageView.image = _image_list[indexPath.row];
     cell.textLabel.text = _text_list[indexPath.row];
     return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        FollowMeViewController *followMe = [[FollowMeViewController alloc] init];
+        [self.navigationController pushViewController:followMe animated:YES];
+        [self presentViewController:followMe animated:NO completion:^{
+            
+        }];
+    }
+    else if (indexPath.row == 1){
+        MyFollowsViewController *myFollows = [[MyFollowsViewController alloc] init];
+//        [self.navigationController pushViewController:myFollows animated:YES];
+        [self presentViewController:myFollows animated:NO completion:^{
+            
+        }];
+    }
+    else if (indexPath.row == 2){
+        CollectionBoxViewController *collectionBox = [[CollectionBoxViewController alloc] init];
+//        [self.navigationController pushViewController:collectionBox animated:YES];
+        [self presentViewController:collectionBox animated:NO completion:^{
+            
+        }];
+    }
+    else if (indexPath.row == 3){
+        PostBoxViewController *postBox = [[PostBoxViewController alloc] init];
+//        [self.navigationController pushViewController:postBox animated:YES];
+        [self presentViewController:postBox animated:NO completion:^{
+            
+        }];
+    }
+}
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
 }
 @end

@@ -94,7 +94,6 @@ static const UIEdgeInsets kDefaultInsets = {10,10,10,10};
     
     //设置单元格布局
     //1.设置单元格的宽 宽 = （父视图的宽- 左右的偏移量 - 单元格间隙）/列数
-    NSLog(@"%f",self.collectionView.frame.size.width);
     CGFloat  cellWith = (self.collectionView.frame.size.width - kDefaultInsets.left - kDefaultInsets.right - (kColumns-1)*kSpace)/kColumns;
     
     //2.设置单元格高度 高度为不定值 随机获取
