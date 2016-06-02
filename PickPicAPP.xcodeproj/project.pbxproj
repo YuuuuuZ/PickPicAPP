@@ -36,8 +36,11 @@
 		04846AA01D0006C9007E3CE3 /* LeftMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04846A8C1D0006C9007E3CE3 /* LeftMeViewController.xib */; };
 		04846AA11D0006C9007E3CE3 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04846A921D0006C9007E3CE3 /* MessageViewController.m */; };
 		04846AA21D0006C9007E3CE3 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04846A931D0006C9007E3CE3 /* MessageViewController.xib */; };
-		04846AA31D0006C9007E3CE3 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04846A991D0006C9007E3CE3 /* PostViewController.m */; };
-		04846AA41D0006C9007E3CE3 /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04846A9A1D0006C9007E3CE3 /* PostViewController.xib */; };
+		1818F4E71D001CB4001E24F4 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818F4E61D001CB4001E24F4 /* PostViewController.m */; };
+		1818F4EB1D001D58001E24F4 /* RRMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818F4EA1D001D58001E24F4 /* RRMessageModel.m */; };
+		1818F4F11D001D91001E24F4 /* RRCustomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818F4EE1D001D91001E24F4 /* RRCustomScrollView.m */; };
+		1818F4F21D001D91001E24F4 /* UICollectionViewCellPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818F4F01D001D91001E24F4 /* UICollectionViewCellPhoto.m */; };
+		1818F4F41D001DB3001E24F4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1818F4F31D001DB3001E24F4 /* AssetsLibrary.framework */; };
 		C6C8D6751D000F2D00948262 /* picDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C8D6731D000F2D00948262 /* picDetails.m */; };
 		C6C8D6761D000F2D00948262 /* picDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6C8D6741D000F2D00948262 /* picDetails.xib */; };
 		C6C8D6791D000F4A00948262 /* WaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C8D6781D000F4A00948262 /* WaterFallLayout.m */; };
@@ -87,11 +90,17 @@
 		04846A911D0006C9007E3CE3 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		04846A921D0006C9007E3CE3 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		04846A931D0006C9007E3CE3 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
-		04846A981D0006C9007E3CE3 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
-		04846A991D0006C9007E3CE3 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
-		04846A9A1D0006C9007E3CE3 /* PostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
 		04846AA51D0006EA007E3CE3 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		04846AA61D000702007E3CE3 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1818F4E51D001CB4001E24F4 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
+		1818F4E61D001CB4001E24F4 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
+		1818F4E91D001D58001E24F4 /* RRMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRMessageModel.h; sourceTree = "<group>"; };
+		1818F4EA1D001D58001E24F4 /* RRMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRMessageModel.m; sourceTree = "<group>"; };
+		1818F4ED1D001D91001E24F4 /* RRCustomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRCustomScrollView.h; sourceTree = "<group>"; };
+		1818F4EE1D001D91001E24F4 /* RRCustomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRCustomScrollView.m; sourceTree = "<group>"; };
+		1818F4EF1D001D91001E24F4 /* UICollectionViewCellPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewCellPhoto.h; sourceTree = "<group>"; };
+		1818F4F01D001D91001E24F4 /* UICollectionViewCellPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewCellPhoto.m; sourceTree = "<group>"; };
+		1818F4F31D001DB3001E24F4 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		C6C8D6721D000F2D00948262 /* picDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = picDetails.h; sourceTree = "<group>"; };
 		C6C8D6731D000F2D00948262 /* picDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = picDetails.m; sourceTree = "<group>"; };
 		C6C8D6741D000F2D00948262 /* picDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = picDetails.xib; sourceTree = "<group>"; };
@@ -104,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1818F4F41D001DB3001E24F4 /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +123,7 @@
 		04846A2A1D000565007E3CE3 = {
 			isa = PBXGroup;
 			children = (
+				1818F4F31D001DB3001E24F4 /* AssetsLibrary.framework */,
 				04846A351D000566007E3CE3 /* PickPicAPP */,
 				04846A341D000566007E3CE3 /* Products */,
 			);
@@ -352,8 +363,8 @@
 			isa = PBXGroup;
 			children = (
 				04846A971D0006C9007E3CE3 /* Controller */,
-				04846A9B1D0006C9007E3CE3 /* Model */,
-				04846A9C1D0006C9007E3CE3 /* View */,
+				1818F4E81D001D3D001E24F4 /* Model */,
+				1818F4EC1D001D65001E24F4 /* View */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -361,23 +372,28 @@
 		04846A971D0006C9007E3CE3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				04846A981D0006C9007E3CE3 /* PostViewController.h */,
-				04846A991D0006C9007E3CE3 /* PostViewController.m */,
-				04846A9A1D0006C9007E3CE3 /* PostViewController.xib */,
+				1818F4E51D001CB4001E24F4 /* PostViewController.h */,
+				1818F4E61D001CB4001E24F4 /* PostViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		04846A9B1D0006C9007E3CE3 /* Model */ = {
+		1818F4E81D001D3D001E24F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1818F4E91D001D58001E24F4 /* RRMessageModel.h */,
+				1818F4EA1D001D58001E24F4 /* RRMessageModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		04846A9C1D0006C9007E3CE3 /* View */ = {
+		1818F4EC1D001D65001E24F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1818F4ED1D001D91001E24F4 /* RRCustomScrollView.h */,
+				1818F4EE1D001D91001E24F4 /* RRCustomScrollView.m */,
+				1818F4EF1D001D91001E24F4 /* UICollectionViewCellPhoto.h */,
+				1818F4F01D001D91001E24F4 /* UICollectionViewCellPhoto.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -462,7 +478,6 @@
 				04846A5F1D0005F8007E3CE3 /* found.png in Resources */,
 				04846A5E1D0005F8007E3CE3 /* Creative_568px_1141925_easyicon.net.png in Resources */,
 				04846A5C1D0005F8007E3CE3 /* contect.png in Resources */,
-				04846AA41D0006C9007E3CE3 /* PostViewController.xib in Resources */,
 				04846A461D000566007E3CE3 /* LaunchScreen.storyboard in Resources */,
 				04846A621D0005F8007E3CE3 /* Location_568px_1141916_easyicon.net.png in Resources */,
 				04846A9E1D0006C9007E3CE3 /* HomeViewController.xib in Resources */,
@@ -487,10 +502,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1818F4EB1D001D58001E24F4 /* RRMessageModel.m in Sources */,
 				04846A801D000696007E3CE3 /* UIViewController+MMDrawerController.m in Sources */,
 				04846A6C1D00065E007E3CE3 /* BaseViewController.m in Sources */,
+				1818F4F21D001D91001E24F4 /* UICollectionViewCellPhoto.m in Sources */,
 				04846A7D1D000696007E3CE3 /* MMDrawerController.m in Sources */,
 				04846A7E1D000696007E3CE3 /* MMDrawerVisualState.m in Sources */,
+				1818F4E71D001CB4001E24F4 /* PostViewController.m in Sources */,
+				1818F4F11D001D91001E24F4 /* RRCustomScrollView.m in Sources */,
 				C6C8D6751D000F2D00948262 /* picDetails.m in Sources */,
 				04846A7B1D000696007E3CE3 /* CustomTabBarController.m in Sources */,
 				04846AA11D0006C9007E3CE3 /* MessageViewController.m in Sources */,
@@ -502,7 +521,6 @@
 				C6C8D6791D000F4A00948262 /* WaterFallLayout.m in Sources */,
 				04846A9D1D0006C9007E3CE3 /* HomeViewController.m in Sources */,
 				04846A9F1D0006C9007E3CE3 /* LeftMeViewController.m in Sources */,
-				04846AA31D0006C9007E3CE3 /* PostViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
