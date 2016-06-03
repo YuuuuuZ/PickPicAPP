@@ -10,5 +10,6 @@
 #define Common_h
 
 #import "BaseViewController.h"
+#import "BaseNavigationViewController.h"
 
 #endif /* Common_h */

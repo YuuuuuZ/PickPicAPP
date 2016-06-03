@@ -19,7 +19,7 @@
     
     self.navigationBar.translucent = NO;
     
-    //更改导航栏的北京图片
+    //更改导航栏的背景图片
     [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"tabBar_bg.jpg"] forBarMetrics:UIBarMetricsDefault];
 }
 @end

@@ -14,6 +14,7 @@
 #import "BaseNavigationViewController.h"
 #import "LoginViewController.h"
 #import <MaxLeap/MaxLeap.h>
+
 @interface AppDelegate ()
 
 @end
@@ -28,7 +29,8 @@
     [self.window makeKeyAndVisible];
     /*--------------------------------------------------------------------*/
     //左侧控制器
-    LeftMeViewController *leftMe = [[LeftMeViewController alloc] init];
+    LeftMeViewController *leftBaseVC = [[LeftMeViewController alloc] init];
+    UINavigationController *leftNavigationVC = [[UINavigationController alloc] initWithRootViewController:leftBaseVC];
     
     //中间的标签控制器
     CustomTabBarController *tabBarC = [[CustomTabBarController alloc] initWithSelectedImage:nil tabBarBackgroundImage:[UIImage imageNamed:@"tabBar_bg.jpg"]];
@@ -49,8 +51,8 @@
     tabBarC.viewControllers = tabBar_controllers;
     
     //侧滑控制器
-    MMDrawerController *mmDrawerC = [[MMDrawerController alloc] initWithCenterViewController:tabBarC leftDrawerViewController:leftMe];
-    mmDrawerC.maximumLeftDrawerWidth = self.window.frame.size.width/5*4;
+    MMDrawerController *mmDrawerC = [[MMDrawerController alloc] initWithCenterViewController:tabBarC leftDrawerViewController:leftNavigationVC];
+    mmDrawerC.maximumLeftDrawerWidth = 350;
     mmDrawerC.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     mmDrawerC.closeDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     
