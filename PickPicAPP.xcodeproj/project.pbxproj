@@ -36,6 +36,14 @@
 		04846AA01D0006C9007E3CE3 /* LeftMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04846A8C1D0006C9007E3CE3 /* LeftMeViewController.xib */; };
 		04846AA11D0006C9007E3CE3 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04846A921D0006C9007E3CE3 /* MessageViewController.m */; };
 		04846AA21D0006C9007E3CE3 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04846A931D0006C9007E3CE3 /* MessageViewController.xib */; };
+		048E56601D02B95800E5DDC2 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048E56571D02B95800E5DDC2 /* ContactViewController.m */; };
+		048E56611D02B95800E5DDC2 /* ContactViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048E56581D02B95800E5DDC2 /* ContactViewController.storyboard */; };
+		048E56621D02B95800E5DDC2 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048E565B1D02B95800E5DDC2 /* ChatViewController.m */; };
+		048E56631D02B95800E5DDC2 /* ChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048E565C1D02B95800E5DDC2 /* ChatViewController.storyboard */; };
+		048E56641D02B95800E5DDC2 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 048E565E1D02B95800E5DDC2 /* MessageTableViewCell.m */; };
+		048E56651D02B95800E5DDC2 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048E565F1D02B95800E5DDC2 /* MessageTableViewCell.xib */; };
+		048E56691D02BA4800E5DDC2 /* MyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048E56671D02BA4800E5DDC2 /* MyInfoViewController.m */; };
+		048E566A1D02BA4800E5DDC2 /* MyInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048E56681D02BA4800E5DDC2 /* MyInfoViewController.xib */; };
 		04992E371D0051AA00781190 /* FollowMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04992E351D0051AA00781190 /* FollowMeViewController.m */; };
 		04992E381D0051AA00781190 /* FollowMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04992E361D0051AA00781190 /* FollowMeViewController.xib */; };
 		04992E3C1D0051C400781190 /* MyFollowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04992E3A1D0051C400781190 /* MyFollowsViewController.m */; };
@@ -114,6 +122,18 @@
 		04846A931D0006C9007E3CE3 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		04846AA51D0006EA007E3CE3 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		04846AA61D000702007E3CE3 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		048E56561D02B95800E5DDC2 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		048E56571D02B95800E5DDC2 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
+		048E56581D02B95800E5DDC2 /* ContactViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ContactViewController.storyboard; sourceTree = "<group>"; };
+		048E565A1D02B95800E5DDC2 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		048E565B1D02B95800E5DDC2 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		048E565C1D02B95800E5DDC2 /* ChatViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChatViewController.storyboard; sourceTree = "<group>"; };
+		048E565D1D02B95800E5DDC2 /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
+		048E565E1D02B95800E5DDC2 /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
+		048E565F1D02B95800E5DDC2 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		048E56661D02BA4800E5DDC2 /* MyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoViewController.h; sourceTree = "<group>"; };
+		048E56671D02BA4800E5DDC2 /* MyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoViewController.m; sourceTree = "<group>"; };
+		048E56681D02BA4800E5DDC2 /* MyInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyInfoViewController.xib; sourceTree = "<group>"; };
 		04992E341D0051AA00781190 /* FollowMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowMeViewController.h; sourceTree = "<group>"; };
 		04992E351D0051AA00781190 /* FollowMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowMeViewController.m; sourceTree = "<group>"; };
 		04992E361D0051AA00781190 /* FollowMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FollowMeViewController.xib; sourceTree = "<group>"; };
@@ -407,6 +427,11 @@
 		04846A901D0006C9007E3CE3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				048E56551D02B95800E5DDC2 /* 联系人详情界面 */,
+				048E56591D02B95800E5DDC2 /* 聊天界面 */,
+				048E565D1D02B95800E5DDC2 /* MessageTableViewCell.h */,
+				048E565E1D02B95800E5DDC2 /* MessageTableViewCell.m */,
+				048E565F1D02B95800E5DDC2 /* MessageTableViewCell.xib */,
 				04846A911D0006C9007E3CE3 /* MessageViewController.h */,
 				04846A921D0006C9007E3CE3 /* MessageViewController.m */,
 				04846A931D0006C9007E3CE3 /* MessageViewController.xib */,
@@ -447,6 +472,26 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		048E56551D02B95800E5DDC2 /* 联系人详情界面 */ = {
+			isa = PBXGroup;
+			children = (
+				048E56561D02B95800E5DDC2 /* ContactViewController.h */,
+				048E56571D02B95800E5DDC2 /* ContactViewController.m */,
+				048E56581D02B95800E5DDC2 /* ContactViewController.storyboard */,
+			);
+			path = "联系人详情界面";
+			sourceTree = "<group>";
+		};
+		048E56591D02B95800E5DDC2 /* 聊天界面 */ = {
+			isa = PBXGroup;
+			children = (
+				048E565A1D02B95800E5DDC2 /* ChatViewController.h */,
+				048E565B1D02B95800E5DDC2 /* ChatViewController.m */,
+				048E565C1D02B95800E5DDC2 /* ChatViewController.storyboard */,
+			);
+			path = "聊天界面";
+			sourceTree = "<group>";
+		};
 		04992E331D00518000781190 /* subControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,6 +507,9 @@
 				04992E431D00521600781190 /* PostBoxViewController.h */,
 				04992E441D00521600781190 /* PostBoxViewController.m */,
 				04992E451D00521600781190 /* PostBoxViewController.xib */,
+				048E56661D02BA4800E5DDC2 /* MyInfoViewController.h */,
+				048E56671D02BA4800E5DDC2 /* MyInfoViewController.m */,
+				048E56681D02BA4800E5DDC2 /* MyInfoViewController.xib */,
 			);
 			path = subControllers;
 			sourceTree = "<group>";
@@ -584,6 +632,7 @@
 				04992E4B1D0064D800781190 /* icon.png in Resources */,
 				04E92BE11D01B2250086DE63 /* briefcase_669px_1165685_easyicon.net.png in Resources */,
 				04846A621D0005F8007E3CE3 /* Location_568px_1141916_easyicon.net.png in Resources */,
+				048E56651D02B95800E5DDC2 /* MessageTableViewCell.xib in Resources */,
 				04846A9E1D0006C9007E3CE3 /* HomeViewController.xib in Resources */,
 				04846A431D000566007E3CE3 /* Assets.xcassets in Resources */,
 				04992E381D0051AA00781190 /* FollowMeViewController.xib in Resources */,
@@ -591,12 +640,15 @@
 				04846AA01D0006C9007E3CE3 /* LeftMeViewController.xib in Resources */,
 				04846A641D0005F8007E3CE3 /* tabBar_bg.jpg in Resources */,
 				04846A611D0005F8007E3CE3 /* Link_Building_764px_1141913_easyicon.net.png in Resources */,
+				048E56611D02B95800E5DDC2 /* ContactViewController.storyboard in Resources */,
 				04D86F721D00821C00A5B7E1 /* LoginViewController.xib in Resources */,
 				04E92BE01D01B2250086DE63 /* browser_669px_1165687_easyicon.net.png in Resources */,
 				04846A5D1D0005F8007E3CE3 /* Conversion_802px_1141917_easyicon.net.png in Resources */,
 				04846A5B1D0005F8007E3CE3 /* addressBook2.png in Resources */,
 				04846A411D000566007E3CE3 /* Main.storyboard in Resources */,
 				04992E471D00521600781190 /* PostBoxViewController.xib in Resources */,
+				048E566A1D02BA4800E5DDC2 /* MyInfoViewController.xib in Resources */,
+				048E56631D02B95800E5DDC2 /* ChatViewController.storyboard in Resources */,
 				C6C8D6761D000F2D00948262 /* picDetails.xib in Resources */,
 				04E92BDD1D01B2250086DE63 /* shake_hands_1431.2839506173px_1200187_easyicon.net.png in Resources */,
 				04846AA21D0006C9007E3CE3 /* MessageViewController.xib in Resources */,
@@ -611,16 +663,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048E56621D02B95800E5DDC2 /* ChatViewController.m in Sources */,
 				1818F4EB1D001D58001E24F4 /* RRMessageModel.m in Sources */,
 				04846A801D000696007E3CE3 /* UIViewController+MMDrawerController.m in Sources */,
 				04992E411D0051DA00781190 /* CollectionBoxViewController.m in Sources */,
 				04846A6C1D00065E007E3CE3 /* BaseViewController.m in Sources */,
 				04992E461D00521600781190 /* PostBoxViewController.m in Sources */,
+				048E56691D02BA4800E5DDC2 /* MyInfoViewController.m in Sources */,
 				1818F4F21D001D91001E24F4 /* UICollectionViewCellPhoto.m in Sources */,
 				04846A7D1D000696007E3CE3 /* MMDrawerController.m in Sources */,
 				04846A7E1D000696007E3CE3 /* MMDrawerVisualState.m in Sources */,
 				04D86F711D00821C00A5B7E1 /* LoginViewController.m in Sources */,
 				1818F4E71D001CB4001E24F4 /* PostViewController.m in Sources */,
+				048E56641D02B95800E5DDC2 /* MessageTableViewCell.m in Sources */,
 				1818F4F11D001D91001E24F4 /* RRCustomScrollView.m in Sources */,
 				C6C8D6751D000F2D00948262 /* picDetails.m in Sources */,
 				04846A7B1D000696007E3CE3 /* CustomTabBarController.m in Sources */,
@@ -631,6 +686,7 @@
 				04846A381D000566007E3CE3 /* main.m in Sources */,
 				04846A6B1D00065E007E3CE3 /* BaseNavigationViewController.m in Sources */,
 				04846A7C1D000696007E3CE3 /* MMDrawerBarButtonItem.m in Sources */,
+				048E56601D02B95800E5DDC2 /* ContactViewController.m in Sources */,
 				04846A7F1D000696007E3CE3 /* MMExampleDrawerVisualStateManager.m in Sources */,
 				C6C8D6791D000F4A00948262 /* WaterFallLayout.m in Sources */,
 				04846A9D1D0006C9007E3CE3 /* HomeViewController.m in Sources */,

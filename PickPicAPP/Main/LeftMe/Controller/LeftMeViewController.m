@@ -11,10 +11,13 @@
 #import "MyFollowsViewController.h"
 #import "CollectionBoxViewController.h"
 #import "PostBoxViewController.h"
+#import "MyInfoViewController.h"
 
 @interface LeftMeViewController ()<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)UIImageView *headImage;
+@property(nonatomic,strong)UILabel *nickName;
+@property(nonatomic,strong)UILabel *signText;
 @property(nonatomic,strong)NSArray *text_list;
 @property(nonatomic,strong)NSArray *image_list;
 @end
@@ -33,11 +36,13 @@
     _text_list = @[@"我关注的",
                  @"关注我的",
                  @"收集箱",
-                 @"发布箱"];
-    _image_list = @[[UIImage imageNamed:@"clap_hands_1308.0069124424px_1200169_easyicon.net"],
-                    [UIImage imageNamed:@"shake_hands_1431.2839506173px_1200187_easyicon.net"],
+                 @"发布箱",
+                   @"修改密码"];
+    _image_list = @[[UIImage imageNamed:@"browser_669px_1165687_easyicon.net"],
                     [UIImage imageNamed:@"browser_669px_1165687_easyicon.net"],
-                    [UIImage imageNamed:@"briefcase_669px_1165685_easyicon.net"]];
+                    [UIImage imageNamed:@"browser_669px_1165687_easyicon.net"],
+                    [UIImage imageNamed:@"briefcase_669px_1165685_easyicon.net"],
+                    [UIImage imageNamed:@"browser_669px_1165687_easyicon.net"]];
     
     [self loadTableView];
 }
@@ -56,30 +61,42 @@
     _headImage.image = [UIImage imageNamed:@"headImage.jpg"];
     _headImage.clipsToBounds = YES;
     _headImage.layer.cornerRadius = 40;
-    //用户昵称
-    UILabel *nickName = [[UILabel alloc] initWithFrame:CGRectMake(100, 25, 200, 30)];
-    nickName.text = @"一名孤独的吃货";
-    //用户签名
-    UILabel *signText = [[UILabel alloc] initWithFrame:CGRectMake(100, 55, 200, 20)];
-    signText.text = @"哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈";
-    signText.font = [UIFont systemFontOfSize:14];
-    
     [headerView addSubview:_headImage];
-    [headerView addSubview:nickName];
-    [headerView addSubview:signText];
+    
+    UIView *changeInfoView = [[UIView alloc] initWithFrame:CGRectMake(100, 0, kScreenW-100, 100)];
+    [headerView addSubview:changeInfoView];
+    //用户昵称
+    _nickName = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, 200, 30)];
+    _nickName.text = @"这里显示的是昵称";
+    //用户签名
+    _signText = [[UILabel alloc] initWithFrame:CGRectMake(0, 55, 200, 20)];
+    _signText.text = @"这里显示的是个性签名,谢谢";
+    _signText.font = [UIFont systemFontOfSize:14];
+    
+    [changeInfoView addSubview:_nickName];
+    [changeInfoView addSubview:_signText];
     
     _tableView.tableHeaderView = headerView;
     [self.view addSubview:_tableView];
     
     //注销按钮
-    UIButton *signOut = [[UIButton alloc] initWithFrame:CGRectMake((kScreenW/5*4)/2.0-20, kScreenH-50, 80, 40)];
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(10, 500, 80, 40)];
+    [btn setTitle:@"修改密码" forState:UIControlStateNormal];
+    btn.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btn];
+    //注销按钮
+    UIButton *signOut = [[UIButton alloc] initWithFrame:CGRectMake(180, 500, 80, 40)];
     [signOut setTitle:@"注销" forState:UIControlStateNormal];
     signOut.backgroundColor = [UIColor redColor];
     [self.view addSubview:signOut];
     
-    headerView.userInteractionEnabled = YES;
+    _headImage.userInteractionEnabled = YES;
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headImageClick)];
-    [headerView addGestureRecognizer:gesture];
+    [_headImage addGestureRecognizer:gesture];
+    
+    changeInfoView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *changeGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeMyInfo)];
+    [changeInfoView addGestureRecognizer:changeGesture];
 }
 -(void)headImageClick{
     //弹出一个表单选择器
@@ -131,6 +148,10 @@
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+-(void)changeMyInfo{
+    MyInfoViewController *myInfoVC = [[MyInfoViewController alloc] init];
+    [self.navigationController pushViewController:myInfoVC animated:YES];
+}
 #pragma mark ----- UITableViewDataSource -----
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _text_list.count;
@@ -149,6 +170,23 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         FollowMeViewController *followMe = [[FollowMeViewController alloc] init];
+//        
+//        UITabBarController *tab = [[UITabBarController alloc]init];
+//        
+//        id next = [self nextResponder];
+//        
+//        if (![next isKindOfClass:[UITabBarController class]]) {
+//            
+//            next = [next nextResponder];
+//        }else if ([next isKindOfClass:[UITabBarController class]]){
+//            
+//            tab = (UITabBarController *)next;
+//            
+//            NSLog(@"%@",tab);
+//            
+//        }
+        
+        //  [tab.view bringSubviewToFront:followMe.view];
         [self.navigationController pushViewController:followMe animated:YES];
     }
     else if (indexPath.row == 1){
