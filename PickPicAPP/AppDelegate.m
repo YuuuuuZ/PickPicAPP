@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "MMDrawerController.h"
 #import "CustomTabBarController.h"
-#import "LeftMeViewController.h"
 #import "BaseViewController.h"
 #import "BaseNavigationViewController.h"
 #import "LoginViewController.h"
@@ -24,69 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    //    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    /*--------------------------------------------------------------------*/
-    //左侧控制器
-    LeftMeViewController *leftBaseVC = [[LeftMeViewController alloc] init];
-    UINavigationController *leftNavigationVC = [[UINavigationController alloc] initWithRootViewController:leftBaseVC];
-    
-    //中间的标签控制器
-    CustomTabBarController *tabBarC = [[CustomTabBarController alloc] initWithSelectedImage:nil tabBarBackgroundImage:[UIImage imageNamed:@"tabBar_bg.jpg"]];
-    
-    //控制器名字数组
-    NSArray *controllers_array = @[@"Home",@"Message",@"Post"];
-    //标签控制器的子控制器数组
-    NSMutableArray *tabBar_controllers = [NSMutableArray array];
-    
-    for (int i=0; i<controllers_array.count; i++) {
-        
-        BaseViewController *vc = [[NSClassFromString([NSString stringWithFormat:@"%@ViewController",controllers_array[i]]) alloc] init];
-        vc.view.backgroundColor = [UIColor colorWithRed:171 green:192 blue:154 alpha:1];
-        BaseNavigationViewController *nvc = [[BaseNavigationViewController alloc] initWithRootViewController:vc];
-        
-        [tabBar_controllers addObject:nvc];
-    }
-    tabBarC.viewControllers = tabBar_controllers;
-    
-    //侧滑控制器
-    MMDrawerController *mmDrawerC = [[MMDrawerController alloc] initWithCenterViewController:tabBarC leftDrawerViewController:leftNavigationVC];
-    mmDrawerC.maximumLeftDrawerWidth = 350;
-    mmDrawerC.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
-    mmDrawerC.closeDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
-    
-    //将侧滑控制器作为窗口的根视图控制器
-   // self.window.rootViewController = mmDrawerC;
-    
-    //如果不是第一次登陆
-    if ([[NSUserDefaults standardUserDefaults]boolForKey:kIsUsed]==YES) {
-        
-        self.window.rootViewController = mmDrawerC;
-        
-        return YES;
-        
-    }
-    
-    //第一次加载的时候
-    LoginViewController *loginVC = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
-    
-    __weak AppDelegate *weakSelf = self;
-    
-    [loginVC setStartBlock:^{
-        
-        __strong AppDelegate *strongSelf = weakSelf;
-        
-        strongSelf.window.rootViewController = mmDrawerC;
-        
-        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:kIsUsed];
-        
-    }];
-    
-    self.window.rootViewController = loginVC;
-    
-    
-    [MaxLeap setApplicationId:@"574ea2caa5ff7f0001c6d67e" clientKey:@"MDJMVHBIbDZQV1RfTFV5czhYWHVSQQ" site:MLSiteCN];
+    [MaxLeap setApplicationId:@"57544700169e7d0001c8bafb" clientKey:@"bk1pWUxSbi1tWjBHRS1SMHl4NFk3dw" site:MLSiteCN];
     
     MLObject *obj = [MLObject objectWithoutDataWithClassName:@"Test" objectId:@"561c83c0226"];
     [obj fetchIfNeededInBackgroundWithBlock:^(MLObject * _Nullable object, NSError * _Nullable error) {
@@ -97,9 +34,58 @@
         }
     }];
     
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    //    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    /*--------------------------------------------------------------------*/
     
+    //中间的标签控制器
+    CustomTabBarController *tabBarC = [[CustomTabBarController alloc] initWithSelectedImage:nil tabBarBackgroundImage:[UIImage imageNamed:@"tabBar_bg.jpg"]];
     
-
+    //控制器名字数组
+    NSArray *controllers_array = @[@"Home",@"Message",@"Post",@"AboutMe"];
+    //标签控制器的子控制器数组
+    NSMutableArray *tabBar_controllers = [NSMutableArray array];
+    
+    for (int i=0; i<controllers_array.count; i++) {
+        
+        BaseViewController *vc = [[NSClassFromString([NSString stringWithFormat:@"%@ViewController",controllers_array[i]]) alloc] init];
+        vc.tabBarItem.image = [UIImage imageNamed:[NSString stringWithFormat:@"tab_%d",i+1]];
+        
+        BaseNavigationViewController *nvc = [[BaseNavigationViewController alloc] initWithRootViewController:vc];
+        
+        [tabBar_controllers addObject:nvc];
+    }
+    tabBarC.viewControllers = tabBar_controllers;
+    
+    //将侧滑控制器作为窗口的根视图控制器
+   // self.window.rootViewController = tabBarC;
+    
+    //第一次加载的时候
+    LoginViewController *loginVC = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+    
+    __weak AppDelegate *weakSelf = self;
+    [loginVC setStartBlock:^{
+        
+        __strong AppDelegate *strongSelf = weakSelf;
+        strongSelf.window.rootViewController = tabBarC;
+    }];
+    
+    self.window.rootViewController = loginVC;
+    
+    if (currentUser) {
+        if ([MLAnonymousUtils isLinkedWithUser:currentUser]) {
+            //已经匿名登录
+            self.window.rootViewController = loginVC;
+        }else{
+            //常规登录
+            self.window.rootViewController = tabBarC;
+        }
+    }else{
+        //未登录
+        self.window.rootViewController = loginVC;
+    }
+    
     return YES;
 }
 

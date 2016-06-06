@@ -1,13 +1,13 @@
 //
-//  MyInfoViewController.h
+//  AboutMeViewController.h
 //  PickPicAPP
 //
 //  Created by mac on 16/6/4.
 //  Copyright © 2016年 mac. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface MyInfoViewController : UIViewController
+@interface AboutMeViewController : BaseViewController
 
 @end

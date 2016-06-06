@@ -14,5 +14,10 @@
 #import "Common.h"
 #define kScreenW self.view.bounds.size.width
 #define kScreenH self.view.bounds.size.height
-#define kIsUsed @"kIsUsed"
+
+#define MainColor [UIColor colorWithRed:255/255.0 green:102/255.0 blue:102/255.0 alpha:1]
+#define LightMainColor [UIColor colorWithRed:255/255.0 green:115/255.0 blue:115/255.0 alpha:1]
+
+#define currentUser [MLUser currentUser]
+
 #endif /* PrefixHeader_pch */

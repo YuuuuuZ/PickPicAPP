@@ -33,7 +33,7 @@
     if (self = [super init]) {
         self.title = @"发布";
         self.tabBarItem.title = nil;
-        self.tabBarItem.image = [UIImage imageNamed:@"found.png"];
+//        self.tabBarItem.image = [UIImage imageNamed:@"found.png"];
         self.view.backgroundColor=[UIColor lightGrayColor];
         [self initUI];
     }

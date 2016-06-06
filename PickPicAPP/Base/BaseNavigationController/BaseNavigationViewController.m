@@ -19,7 +19,8 @@
     
     self.navigationBar.translucent = NO;
     
-    //更改导航栏的背景图片
-    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"tabBar_bg.jpg"] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:MainColor,UITextAttributeTextColor,nil]];
+    
+    [[UINavigationBar appearance] setTintColor:MainColor];
 }
 @end

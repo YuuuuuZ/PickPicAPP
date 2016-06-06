@@ -107,7 +107,8 @@
 
     _customTabBar = [[UIView alloc]initWithFrame:CGRectMake(0, 0,kScreenWidth, 49)];
     
-    _customTabBar.backgroundColor = [UIColor colorWithPatternImage:[_bgImg stretchableImageWithLeftCapWidth:160 topCapHeight:25]];
+//    _customTabBar.backgroundColor = [UIColor colorWithPatternImage:[_bgImg stretchableImageWithLeftCapWidth:160 topCapHeight:25]];
+    _customTabBar.backgroundColor = [UIColor whiteColor];
     
     [self.tabBar addSubview:_customTabBar];
 }

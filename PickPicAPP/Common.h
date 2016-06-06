@@ -12,4 +12,6 @@
 #import "BaseViewController.h"
 #import "BaseNavigationViewController.h"
 
+#import <MaxLeap/MaxLeap.h>
+
 #endif /* Common_h */

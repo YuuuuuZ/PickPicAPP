@@ -18,7 +18,6 @@
     if (self = [super init]) {
         self.title = @"发现";
         self.tabBarItem.title = nil;
-        self.tabBarItem.image = [UIImage imageNamed:@"found.png"];
     }
     return self;
 }
